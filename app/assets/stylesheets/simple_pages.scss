@@ -1,3 +1,55 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  height: 100%;
+}
+
+// NAVIGATION
+
+nav {
+  ul {
+    margin: 0px;
+    padding: 10px 0px;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  $a-tags: 'a, a:active, a:hover, a:visited';
+  $a-tags-hover: 'a:active, a:hover';
+
+  #{$a-tags} {
+    color: #C9463D;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: #FF5E35;
+  }
+}
+
+// FOOTER
+
+footer {
+  height: 30px;
+  background-color: #fcfcfc;
+}
+
+// HOME PAGE
+
+.feature-image {
+  margin: 10px auto;
+  display: block;
+}
+
+// TYPOGRAPHY
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Scope One', serif;
+}
