@@ -64,7 +64,7 @@ end
 
 group :production do
   # PostgreSQL databases via Career Foundry 3.10
-  gem 'pg', '~> 0.20.0'
+  gem 'pg', '~> 0.20'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
