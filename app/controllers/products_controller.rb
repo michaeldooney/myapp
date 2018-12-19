@@ -61,6 +61,12 @@ class ProductsController < ApplicationController
     end
   end
 
+  class SimplePagesController < ApplicationController
+    def landing_page
+      @featured_product = Product.first
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
