@@ -1,4 +1,4 @@
-<%= form_with(model: product, local: true) do |form| %>
+<%= form_with(model: product, local: true, html: {class: 'form-group'}) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-inline">
+    <%= form.label :name, class: 'col-md-1 col-sm-2' %>
+    <%= form.text_field :name, class: 'col-md-3 col-sm-4 form-control form-control-sm' %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="field form-inline">
+    <%= form.label :description, class: 'col-md-1 col-sm-2' %>
+    <%= form.text_area :description, class: 'col-md-3 col-sm-4 form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+  <div class="field form-inline">
+    <%= form.label :image_url, class: 'col-md-1 col-sm-2' %>
+    <%= form.text_field :image_url, class: 'col-md-3 col-sm-4 form-control form-control-sm' %>
   </div>
 
-  <div class="field">
-  <%= form.label :colour %><br>
-  <%= form.text_field :colour %>
+  <div class="field form-inline">
+  <%= form.label :colour, class: 'col-md-1 col-sm-2' %>
+  <%= form.text_field :colour, class: 'col-md-3 col-sm-4 form-control form-control-sm' %>
   </div>
 
-  <div class="field">
-  <%= form.label :price %><br>
-  <%= form.number_field :price %>
+  <div class="field form-inline">
+  <%= form.label :price, class: 'col-md-1 col-sm-2' %>
+  <%= form.number_field :price, class: 'col-md-3 col-sm-4 form-control form-control-sm' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-outline-danger btn-sm my-2 my-sm-0' %>
   </div>
 <% end %>

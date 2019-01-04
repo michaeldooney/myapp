@@ -19,13 +19,19 @@
 
   <body>
     <div class="container">
-      <nav>
+      <nav class="navbar">
         <ul>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Products", products_path %></li>
           <li><%= link_to "About", simple_pages_about_path %></li>
           <li><%= link_to "Contact", simple_pages_contact_path %></li>
         </ul>
+
+        <%= form_with(url: products_path, method: 'get', local: true, html: {class: 'form-inline'}) do |form| %>
+          <%= form.label :q, 'Search for:' %>
+          <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control form-control-sm mx-sm-2' %>
+          <%= form.submit 'Search', class: 'btn btn-outline-danger btn-sm my-2 my-sm-0' %>
+        <% end %>
       </nav>
     </div>
 
