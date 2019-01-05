@@ -1,2 +1,22 @@
-<h1>Contract</h1>
-<h2>Get in touch for your new used bike!</h2>
+<h1>Contact Us</h1>
+
+<%= flash[:notice] %>
+
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true, html: {class: 'form-group'}) do |form| %>
+  <div class="field form-inline">
+    <%= form.label :name, class: 'col-md-1 col-sm-2' %>
+    <%= form.text_field :name, class: "form-control form-control-sm col-md-3 col-sm-4", placeholder: "Enter Name" %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :email, class: 'col-md-1 col-sm-2' %>
+    <%= form.text_field :email, class: "form-control form-control-sm col-md-3 col-sm-4", placeholder: "Enter Email" %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :message, class: 'col-md-1 col-sm-2' %>
+    <%= form.text_area :message, class: "form-control form-control-sm col-md-3 col-sm-4", placeholder: "Enter Message", rows: 5 %>
+  </div>
+
+<%= form.submit "Send", class: 'btn btn-outline-danger btn-sm my-2 my-sm-0' %>
+<% end %>
