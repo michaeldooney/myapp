@@ -1,28 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="col-lg-6 col-md-8 col-sm-12">
+  <h1>
+    <%= @product.name %>
+  </h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <p>
+    <%= image_tag(@product.image_url, class: "img-fluid") %>
+  </p>
 
-<p>
-  <%= image_tag(@product.image_url, class: "img-fluid") %>
-</p>
+  <p>
+    <%= @product.description %>
+  </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+  <p>
+    <strong>Colour:</strong>
+    <%= @product.colour %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
+
+  <p>
+    <strong>Average Rating:</strong>
+    <i class="fa fa-star" aria-hidden="true"></i>
+    <i class="fa fa-star" aria-hidden="true"></i>
+    <i class="fa fa-star" aria-hidden="true"></i>
+    <i class="fa fa-star-half" aria-hidden="true"></i>
+  </p>
+
+  <p>
+    <strong>Top Comment:</strong>
+    <%= @product.highest_rating_comment %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
