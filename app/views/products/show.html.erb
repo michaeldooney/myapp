@@ -23,19 +23,16 @@
     <%= @product.price %>
   </p>
 
-  <p>
+  <p class="d-inline">
     <strong>Average Rating:</strong>
-    <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star-half" aria-hidden="true"></i>
+    <div class="rated d-inline" data-score="<%= @product.average_rating %>"></div>
   </p>
 
-  <p>
-    <strong>Top Comment:</strong>
-    <%= @product.highest_rating_comment %>
-  </p>
 </div>
+
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
