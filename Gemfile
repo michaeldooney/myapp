@@ -72,3 +72,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'font-awesome-sass'
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate'
