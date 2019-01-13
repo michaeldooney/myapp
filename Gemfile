@@ -43,6 +43,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # SQLite gem via Career Foundry 3.10
   gem 'sqlite3'
+  # Run against the latest stable release
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do
