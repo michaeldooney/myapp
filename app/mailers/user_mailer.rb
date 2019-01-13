@@ -7,4 +7,10 @@ class UserMailer < ApplicationMailer
          to: 'mail@michaeldooney.net',
          subject: "A new contact form message from #{name} via BikeBerlin2018")
   end
+
+  def welcome(user)
+    @appname = "Bike Berlin 2018"
+    mail(to: user.email,
+         subject: "Welcome to #{@appname}!")
+  end
 end
