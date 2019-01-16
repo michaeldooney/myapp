@@ -77,3 +77,4 @@ gem 'font-awesome-sass'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
 gem 'rails-controller-testing'
+gem "factory_bot_rails", "~> 4.0"
