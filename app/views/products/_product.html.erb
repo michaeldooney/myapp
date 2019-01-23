@@ -3,5 +3,5 @@
   <h1><%= link_to product.name, product %></h1>
   <p><%= product.description %></p>
   <p><strong>Colour: <%= product.colour %></strong></p>
-  <p><strong>$ <%= product.price %></strong></p>
+  <p><strong><%= number_to_currency(product.price/100.to_f) %></strong></p>
 </div><!-- /col -->
