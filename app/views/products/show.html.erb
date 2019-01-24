@@ -6,7 +6,7 @@
   </h1>
 
   <p>
-    <%= image_tag(@product.image_url, class: "img-fluid") %>
+    <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: @product.image_url) %>
   </p>
 
   <p>
