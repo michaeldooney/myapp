@@ -1,7 +1,9 @@
-<div class="col-sm-6 col-lg-4">
-  <%= image_tag(product.image_url, class: "img-fluid") %>
-  <h1><%= link_to product.name, product %></h1>
-  <p><%= product.description %></p>
-  <p><strong>Colour: <%= product.colour %></strong></p>
-  <p><strong><%= number_to_currency(product.price/100.to_f) %></strong></p>
-</div><!-- /col -->
+<% cache product do %>
+  <div class="col-sm-6 col-lg-4">
+    <%= image_tag(product.image_url, class: "img-fluid") %>
+    <h1><%= link_to product.name, product %></h1>
+    <p><%= product.description %></p>
+    <p><strong>Colour: <%= product.colour %></strong></p>
+    <p><strong><%= number_to_currency(product.price/100.to_f) %></strong></p>
+  </div><!-- /col -->
+<% end %>

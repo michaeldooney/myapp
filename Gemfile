@@ -80,3 +80,4 @@ gem 'rails-controller-testing'
 gem "factory_bot_rails", "~> 4.0"
 gem 'stripe'
 gem "brakeman"
+gem 'dalli'
